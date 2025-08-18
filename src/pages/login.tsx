@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { env } from "../config/env";
 import { Eye, EyeOff, LogIn as LogInIcon, Lock, Mail } from "lucide-react";
+import { Button } from "../components/ui/button";
 
 const LogIn = () => {
   const [email, setEmail] = useState("");
@@ -133,7 +134,7 @@ const LogIn = () => {
                 </div>
               </div>
 
-              <button
+              <Button
                 type="submit"
                 disabled={isLoading}
                 className={`w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200 ${
@@ -170,7 +171,7 @@ const LogIn = () => {
                     Sign In
                   </>
                 )}
-              </button>
+              </Button>
             </form>
 
             <div className="mt-6">
@@ -186,7 +187,7 @@ const LogIn = () => {
               </div>
 
               <div className="mt-6">
-                <button
+                <Button
                   type="button"
                   onClick={() =>
                     (window.location.href = `${env.MAIN_PORTAL_API}/users/register`)
@@ -194,7 +195,7 @@ const LogIn = () => {
                   className="w-full flex justify-center items-center px-4 py-2.5 border border-gray-200 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
                 >
                   Create a new account
-                </button>
+                </Button>
               </div>
             </div>
           </div>
