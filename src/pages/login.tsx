@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { env } from "../config/env";
 import { Eye, EyeOff, LogIn as LogInIcon, Lock, Mail } from "lucide-react";
+import { Button } from "../components/ui/button";
 
 const LogIn = () => {
   const [email, setEmail] = useState("");
@@ -166,7 +167,7 @@ const LogIn = () => {
                     Sign In
                   </>
                 )}
-              </button>
+              </Button>
             </form>
 
             {/* Divider */}
