@@ -130,7 +130,7 @@ const LogIn = () => {
               </div>
 
               {/* Submit Button */}
-              <button
+              <Button
                 type="submit"
                 disabled={isLoading}
                 className={`login-button ${isLoading ? "loading" : ""}`}
