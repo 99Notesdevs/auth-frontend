@@ -4,9 +4,13 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/auth/',
   plugins: [react(), tailwindcss()],
+  preview: {
+    allowedHosts: ['99notes.org', 'www.99notes.org', 'localhost']
+  },
   server: {
-    host: 'auth.main.local',
-    port: 5173
+    host: 'localhost',
+    port: 3003
   }
 })
